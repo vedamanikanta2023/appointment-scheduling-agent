@@ -52,7 +52,7 @@ def book_appointment(booking: Booking):
     for a in appointments:
         if a["date"] == booking.date and a["start_time"] == booking.start_time:
             raise HTTPException(status_code=400, detail="Slot already booked")
-
+    print(appointments)
     booking_id = f"APPT-{len(appointments)+1:03d}"
     appointments.append(booking.dict())
     return {
