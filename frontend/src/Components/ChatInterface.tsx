@@ -81,8 +81,8 @@ const ChatInterface: React.FC = () => {
 
       {!confirmation ? (
         <>
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Select Date:</label>
+          <div className="mb-4" style={{marginBottom:10}}>
+            <label className="block text-sm font-medium mb-1">{"Select Date :"} </label>
             <input
               type="date"
               value={date}
