@@ -1,5 +1,6 @@
 import React from "react";
 import Counter from "./Counter";
+import Counter2 from "./Counter2";
 
 class ClassComp extends React.Component<{}, { num: number }> {
   state = {
@@ -22,6 +23,7 @@ class ClassComp extends React.Component<{}, { num: number }> {
         <h1>Hi I'm Class Component</h1>
         <h1>....</h1>
         <Counter number={this.state.num} />
+        {/* <Counter2 number={this.state.num} /> */}
         <button onClick={this.handleClick.bind(this)}>Increment</button>
       </>
     );
