@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-// import explorerData from "../data/folderData";
+import { useEffect, useRef, useState } from "react";
+import { customThrottle } from "../utils";
 
 export interface FileNode {
   name: string;
@@ -11,8 +11,17 @@ export interface FileNode {
 export default function Folders({ explorer }: { explorer: FileNode }) {
   const [isExpand, setExpand] = useState(false);
 
+  const throttling = useRef(
+    customThrottle(() => {
+      console.log("resizing the window");
+    }, 200),
+  );
+
   useEffect(() => {
+    window.addEventListener("resize", throttling.current);
+
     return () => {
+      window.removeEventListener("resize", throttling.current);
       setExpand(false);
     };
   }, []);

@@ -9,3 +9,16 @@ export function debounce(fn: (...args: any[]) => any, delay = 300) {
     }, delay);
   };
 }
+
+
+export function customThrottle(fn: Function, delay = 300) {
+  let last = 0;
+  return function (...args: any) {
+    let now = Date.now();
+    const difference = now - last;
+    if (difference >= delay) {
+      fn(...args);
+      last = now;
+    }
+  };
+}
