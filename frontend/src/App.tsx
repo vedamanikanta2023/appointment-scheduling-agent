@@ -7,6 +7,8 @@ import ShopingCart from "./Components/ShoppingCard";
 import { Tabs } from "./Components/tabs";
 import explorerData from "./data/folderData";
 import { debounce } from "./utils";
+import { Example } from "./Components/Example";
+// import * as name from "../src/Components/types";
 
 
 const fetchProducts = (str: string) => {
@@ -27,7 +29,8 @@ function App() {
 
     return (
     <>
-      <label htmlFor="input">Search String</label>
+    <Example />
+      {/* <label htmlFor="input">Search String</label>
       <input
         id="input"
         onChange={(e) => debouncedSearch.current(e.target.value)}
@@ -35,7 +38,7 @@ function App() {
       <ShopingCart />
       <Folders explorer={explorerData as FileNode} />
       <ClassComp />
-      <Tabs />
+      <Tabs /> */}
     </>
   );
 }
