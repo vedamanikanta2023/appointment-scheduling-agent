@@ -38,11 +38,11 @@ function Parent() {
   const [count, setCount] = useState(0);
 
   const increment = () => {
-    setCount(count + 1);
+    setCount(count=>count + 1);
+    setCount(count=>count + 1);
   };
 
   return<>
-  <Reffing/>
   <p>{count}</p>
   <Child onClick={increment} />
   </> ;
@@ -50,14 +50,4 @@ function Parent() {
 
 function Child({ onClick }:{onClick:React.DOMAttributes<HTMLButtonElement>}) {
   return <button onClick={onClick}>Increment 99999</button>;
-}
-
-function Reffing() {
-  const boxRef = useRef();
-  
-  useLayoutEffect(() => {
-    console.log(boxRef.current.offsetWidth);
-  }, []);
-
-  return <div ref={boxRef}>Hello</div>;
 }
