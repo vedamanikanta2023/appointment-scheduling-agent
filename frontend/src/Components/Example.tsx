@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 interface InputType {id:number}
 export function Example() {
   const [inputs, setInputs] = useState<InputType[]>([]);
@@ -69,5 +69,13 @@ function Child({
 }: {
   onClick:  React.MouseEventHandler<HTMLButtonElement>;
 }) {
-  return <button onClick={onClick}>Increment 99999</button>;
+  const [count,setCount]=useState(0);
+   useLayoutEffect(() => {
+    debugger;
+    setTimeout(function(){
+      setCount('kjldsafjklasdf');
+    },1000)
+    // console.log(boxRef.current.offsetWidth);
+  }, []);
+  return <button onClick={onClick}>Increment {count}</button>;
 }
