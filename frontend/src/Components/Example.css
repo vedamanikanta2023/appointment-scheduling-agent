@@ -1,0 +1,35 @@
+button:hover {
+    background-color: green;
+}
+
+button:active {
+    background-color: blueviolet;
+}
+
+p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color:red;
+}
+
+p::last-letter {
+    font-size: 2rem;
+  font-weight: bold;
+  color:red;
+}
+
+p::after{
+    content: 'end;';
+}
+
+
+li:nth-child(even) {
+    background-color: yellow;
+}
+li:nth-child(odd) {
+    background-color: lightblue;
+}
+
+li:last-child {
+    background-color: red;
+}

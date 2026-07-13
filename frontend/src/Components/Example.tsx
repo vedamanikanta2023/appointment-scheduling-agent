@@ -1,5 +1,7 @@
 import { useLayoutEffect, useState } from "react";
+import "./Example.css"
 interface InputType {id:number}
+
 export function Example() {
   const [inputs, setInputs] = useState<InputType[]>([]);
   const [id, setId] = useState(1);
@@ -30,9 +32,10 @@ export function Example() {
         +
       </button>
       <br />
-      {inputs.map((input) => {
+      <ul>
+        {inputs.map((input) => {
         return (
-          <div key={input.id}>
+          <li key={input.id}>
             <p>{input.id}</p>
             <input />
             <select>
@@ -41,9 +44,11 @@ export function Example() {
               <option>3</option>
             </select>
             <button onClick={() => handleOnclick(input)}>-</button>
-          </div>
+          </li>
         );
       })}
+      </ul>
+      
     </div>
   );
 }
@@ -54,11 +59,14 @@ function Parent() {
   const increment = () => {
     setCount((count) => count + 1);
     setCount((count) => count + 1);
+    debugger;
+    console.log(count);
   };
 
   return (
     <>
-      <p>{count}</p>
+    <img src="public\poto.jpg" alt="no image"/>
+      <p>vedamaniaknta{count}</p>
       <Child onClick={increment} />
     </>
   );
@@ -71,7 +79,7 @@ function Child({
 }) {
   const [count,setCount]=useState(0);
    useLayoutEffect(() => {
-    debugger;
+    // debugger;
     setTimeout(function(){
       setCount('kjldsafjklasdf');
     },1000)
