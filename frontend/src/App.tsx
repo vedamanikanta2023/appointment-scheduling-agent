@@ -1,13 +1,14 @@
 import * as React from "react";
 import "./App.css";
-import ClassComp from "./Components/ClassComp";
-import Folders, { type FileNode } from "./Components/Folders";
-import ShopingCart from "./Components/ShoppingCard";
-// import ChatInterface from "./Components/ChatInterface";
-import { Tabs } from "./Components/tabs";
-import explorerData from "./data/folderData";
+// import ClassComp from "./Components/ClassComp";
+// import Folders, { type FileNode } from "./Components/Folders";
+// import ShopingCart from "./Components/ShoppingCard";
+// // import ChatInterface from "./Components/ChatInterface";
+// import { Tabs } from "./Components/tabs";
+// import explorerData from "./data/folderData";
 import { debounce } from "./utils";
-import { Example } from "./Components/Example";
+// import { Example } from "./Components/Example";
+import Stock from "./Components/assesment";
 // import * as name from "../src/Components/types";
 
 
@@ -29,7 +30,8 @@ function App() {
 
     return (
     <>
-    <Example />
+    <Stock />
+    {/* <Example /> */}
       {/* <label htmlFor="input">Search String</label>
       <input
         id="input"
