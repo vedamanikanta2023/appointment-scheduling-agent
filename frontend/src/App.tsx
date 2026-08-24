@@ -6,7 +6,7 @@ import "./App.css";
 // // import ChatInterface from "./Components/ChatInterface";
 // import { Tabs } from "./Components/tabs";
 // import explorerData from "./data/folderData";
-import { debounce } from "./utils";
+// import { debounce } from "./utils";
 // import { Example } from "./Components/Example";
 import Stock from "./Components/assesment";
 // import * as name from "../src/Components/types";
@@ -26,9 +26,9 @@ const fetchProducts = (str: string) => {
 };
 
 function App() {
-  const debouncedSearch = React.useRef(
-    debounce((str: string) => fetchProducts(str), 200),
-  );
+  // const debouncedSearch = React.useRef(
+  //   debounce((str: string) => fetchProducts(str), 200),
+  // );
 
     return (
     <>
