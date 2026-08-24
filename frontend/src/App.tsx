@@ -11,6 +11,7 @@ import { debounce } from "./utils";
 import Stock from "./Components/assesment";
 // import * as name from "../src/Components/types";
 import OtpScreen from './Components/OTP/index'
+import { Example } from "./Components/Example";
 
 
 const fetchProducts = (str: string) => {
@@ -33,7 +34,7 @@ function App() {
     <>
     <OtpScreen />
     <Stock />
-    {/* <Example /> */}
+    <Example />
       {/* <label htmlFor="input">Search String</label>
       <input
         id="input"
