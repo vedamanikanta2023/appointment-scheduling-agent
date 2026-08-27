@@ -7,7 +7,6 @@ export function Example() {
   const [id, setId] = useState(1);
 
   const handleOnclick = (key: InputType) => {
-    console.log(key);
     const filtered = inputs.filter((input) => input.id !== key.id);
     setInputs(filtered);
   };
