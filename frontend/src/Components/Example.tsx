@@ -12,8 +12,6 @@ export function Example() {
     setInputs(filtered);
   };
 
-  console.log(inputs, id);
-
   return (
     <div>
       <Parent />
