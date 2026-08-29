@@ -35,7 +35,7 @@ function App() {
     <OtpScreen />
     <Stock />
     <Example />
-      {/* <label htmlFor="input">Search String</label>
+      <label htmlFor="input">Search String</label>
       <input
         id="input"
         onChange={(e) => debouncedSearch.current(e.target.value)}
@@ -43,7 +43,7 @@ function App() {
       <ShopingCart />
       <Folders explorer={explorerData as FileNode} />
       <ClassComp />
-      <Tabs /> */}
+      <Tabs />
     </>
   );
 }
