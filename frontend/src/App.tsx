@@ -26,9 +26,9 @@ const fetchProducts = (str: string) => {
 };
 
 function App() {
-  // const debouncedSearch = React.useRef(
-  //   debounce((str: string) => fetchProducts(str), 200),
-  // );
+  const debouncedSearch = React.useRef(
+    debounce((str: string) => fetchProducts(str), 200),
+  );
 
     return (
     <>
