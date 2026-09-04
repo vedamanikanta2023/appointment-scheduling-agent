@@ -46,39 +46,40 @@ export default function Stock() {
   }, [values.do]);
 
   return (
-<>
-    <div
-  style={{
-    width: 20,
-    height: 90,
-    // backgroundColor: "yellow",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    // overflow: "hidden",
-    position: "relative",
-  }}
->
-  <p
-    style={{
-        color:values.color,
-    //   position: "absolute",
-      top: -20,
-      margin: 0,
-      fontSize: 12,
-    }}
-  >
-    {values.price}
-  </p>
-  <div
-    style={{
-      backgroundColor: values.color,
-      height: `${Math.min((values.price / 50) * 100, 100)}%`,
-      width: 10,
-      transition: "height 0.4s ease, background-color 0.4s ease",
-    }}
-  ></div>
-</div></>
+    <>
+      <div
+        style={{
+          width: 20,
+          height: 90,
+          // backgroundColor: "yellow",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          // overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        <p
+          style={{
+            color: values.color,
+            //   position: "absolute",
+            top: -20,
+            margin: 0,
+            fontSize: 12,
+          }}
+        >
+          {values.price}
+        </p>
+        <div
+          style={{
+            backgroundColor: values.color,
+            height: `${Math.min((values.price / 50) * 100, 100)}%`,
+            width: 10,
+            transition: "height 0.4s ease, background-color 0.4s ease",
+          }}
+        ></div>
+      </div>
+    </>
   );
 }
